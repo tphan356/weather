@@ -47,7 +47,7 @@ Include a short discussion of the findings and what they imply.
 
 ## Authors
 
-- Your Name - [@PatrickPhan]([https://github.com/tphan356/weather])
+- Your Name - [@PatrickPhan](https://github.com/tphan356/weather)
 
 ---
 
