@@ -63,7 +63,7 @@ Include a short discussion of the findings and what they imply.
 
 ## Authors
 
-- Your Name - [@PatrickPhan](https://github.com/tphan356/weather)
+- [@PatrickPhan](https://github.com/tphan356/weather)
 
 ---
 
