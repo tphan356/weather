@@ -46,6 +46,7 @@ The data preparation is performed in:
 The cleaned data file is:
 
 `clean_seattle_berkeley_weather.csv`
+
 ---
 
 ## Analysis
