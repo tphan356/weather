@@ -51,13 +51,63 @@ The cleaned data file is:
 
 ## Analysis
 
-Describe the notebooks and/or scripts used to perform the analysis. Specify the order in which the code should be run to reproduce the results.
+The analysis compares precipitation patterns in Seattle, Washington and Berkeley, California from 2018 through 2022.
+
+Exploratory data analysis includes:
+
+Daily precipitation trends for both cities
+
+Summary statistics for precipitation
+
+Overall mean daily precipitation
+
+Monthly precipitation distributions
+
+Mean precipitation by month
+
+Proportion of days with any precipitation
+
+Monthly proportion of days with precipitation
+
+Two statistical tests were also performed for each month.
+
+First, a Welch's two-sample t-test was used to test whether the mean daily precipitation differed between Seattle and Berkeley.
+
+[
+H_0: \mu_{Seattle} = \mu_{Berkeley}
+]
+
+[
+H_a: \mu_{Seattle} \neq \mu_{Berkeley}
+]
+
+Second, a two-proportion z-test was used to test whether the proportion of days with precipitation differed between the two cities.
+
+[
+H_0: p_{Seattle} = p_{Berkeley}
+]
+
+[
+H_a: p_{Seattle} \neq p_{Berkeley}
+]
+
+A significance level of (\alpha = 0.05) was used for both tests.
+
+All data preparation, exploratory analysis, visualization, and statistical testing are performed in:
+
+code/Weather_Data.ipynb
 
 ---
 
 ## Results
 
-Include a short discussion of the findings and what they imply.
+The analysis shows clear differences in precipitation patterns between Seattle and Berkeley.
+
+For mean daily precipitation, the Welch's t-tests found statistically significant differences between the cities in every month except March at the 0.05 significance level.
+
+The two-proportion z-tests produced a similar result. The proportion of days with precipitation was significantly different between Seattle and Berkeley in every month except March.
+
+These results suggest that Seattle and Berkeley generally have different precipitation patterns throughout the year, both in the amount of precipitation and in how frequently precipitation occurs. March was the only month where the analysis did not find sufficient evidence of a difference between the cities for either measure.
 
 ---
 
