@@ -17,8 +17,8 @@ This project compares precipitation patterns in Seattle, Washington and Berkeley
 
 ```
 ├── data/                                    # Raw and processed data
-│   ├── seattle_rain.csv                       # Raw Seattle data from 01/01/2028 to 12/31/2022
-│   ├── berkeley_rain.csv                      # Raw Berkeley data from 01/01/2028 to 12/31/2022
+│   ├── seattle_rain.csv                       # Raw Seattle data from 01/01/2018 to 12/31/2022
+│   ├── berkeley_rain.csv                      # Raw Berkeley data from 01/01/2018 to 12/31/2022
 │   ├── berkeley_25_years.csv                  # Raw 25 years Berkeley data using for training model 
 │   └── clean_seattle_berkeley_weather.csv     # Clean data             
 ├── code/                                    # Jupyter notebooks and Python scripts
@@ -102,27 +102,43 @@ Berkeley generally receives very little precipitation during the summer, while S
 ### Monthly Precipitation
 
 A Welch's two-sample t-test was performed separately for each month to test whether mean daily precipitation differed between Seattle and Berkeley.
+
 For each month:
-\(H_0: \mu_{\text{Seattle}} = \mu_{\text{Berkeley}}\)
-\(H_a: \mu_{\text{Seattle}} \neq \mu_{\text{Berkeley}}\)
-A significance level of:
-\(\alpha = 0.05\)
-was used.
+
+$$
+H_0: \mu_{\text{Seattle}} = \mu_{\text{Berkeley}}
+$$
+
+$$
+H_a: \mu_{\text{Seattle}} \neq \mu_{\text{Berkeley}}
+$$
+
+A significance level of $\alpha = 0.05$ was used.
+
 The results showed statistically significant differences in mean precipitation for every month except March and April.
 
 ### Seasonal Precipitation
 
-Total precipitation was also calculated for winter, spring, summer, and fall for each year.
-A paired t-test was used to compare Seattle and Berkeley because the seasonal totals were paired by year.
+Total precipitation was calculated for winter, spring, summer, and fall for each year. A paired t-test was used because Seattle and Berkeley seasonal totals were paired by year.
+
 For each season:
-\(H_0: \mu_{\text{Seattle}} = \mu_{\text{Berkeley}}\)
-\(H_a: \mu_{\text{Seattle}} \neq \mu_{\text{Berkeley}}\)
-The results were:
-Season	Seattle Mean	Berkeley Mean	p-value	Significant
-Winter	19.10 in	9.62 in	0.044	Yes
-Spring	7.92 in	5.92 in	0.369	No
-Summer	2.95 in	0.06 in	0.001	Yes
-Fall	11.40 in	3.77 in	0.011	Yes
+
+$$
+H_0: \mu_{\text{Seattle}} = \mu_{\text{Berkeley}}
+$$
+
+$$
+H_a: \mu_{\text{Seattle}} \neq \mu_{\text{Berkeley}}
+$$
+
+| Season | Seattle Mean | Berkeley Mean | p-value | Significant |
+|---|---:|---:|---:|:---:|
+| Winter | 19.10 in | 9.62 in | 0.044 | Yes |
+| Spring | 7.92 in | 5.92 in | 0.369 | No |
+| Summer | 2.95 in | 0.06 in | 0.001 | Yes |
+| Fall | 11.40 in | 3.77 in | 0.011 | Yes |
+
+Seattle received significantly more precipitation than Berkeley during winter, summer, and fall. Spring was the only season where the difference was not statistically significant at the 0.05 level.
 
 
 Seattle received significantly more precipitation than Berkeley during winter, summer, and fall.
@@ -143,9 +159,13 @@ Although Berkeley occasionally experienced unusually wet periods, the overall da
 ## Analysis Files
 
 All data preparation, missing-value imputation, exploratory analysis, visualization, and statistical testing are performed in:
-code/Weather_Data.ipynb
+
+`code/Weather_Data.ipynb`
+
 Clean dataset:
-data/clean_seattle_berkeley_weather.csv
+
+`data/clean_seattle_berkeley_weather.csv`
+
 ---
 
 ## Authors
