@@ -1,6 +1,6 @@
-# Project Title
+# Seattle vs. Berkeley Precipitation Analysis
 
-This project compares precipitation patterns in Seattle, Washington and Berkeley, California from January 1, 2018 through December 31, 2022.
+This project investigates whether it rains more in Seattle, Washington than in Berkeley, California. Daily precipitation data from NOAA were analyzed from 2018 through 2022. Missing observations were cleaned and imputed using historical precipitation patterns, and the two cities were compared using daily, monthly, and seasonal analyses. The results show that Seattle generally receives more precipitation than Berkeley, with especially large differences during summer, fall, and winter.
 
 ---
 
@@ -156,15 +156,20 @@ The seasonal analysis also showed significant differences during winter, summer,
 Although Berkeley occasionally experienced unusually wet periods, the overall daily, monthly, and seasonal patterns support the conclusion that it rains more in Seattle than in Berkeley.
 
 ---
+
 ## Analysis Files
 
 All data preparation, missing-value imputation, exploratory analysis, visualization, and statistical testing are performed in:
 
-`code/Weather_Data.ipynb`
+- [`code/Weather_Data.ipynb`](code/Weather_Data.ipynb)
 
 Clean dataset:
 
-`data/clean_seattle_berkeley_weather.csv`
+- [`data/clean_seattle_berkeley_weather.csv`](data/clean_seattle_berkeley_weather.csv)
+
+Final communication report:
+
+- [`reports/Weather_Reports.pdf`](reports/Weather_Reports.pdf)
 
 ---
 
@@ -180,6 +185,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## Requirements
+
+This project was developed in Python using Jupyter Notebook. The main libraries used are:
+
+- pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- scikit-learn
+- statsmodels
+
+All required Python packages are listed in:
+
+`requirements.txt`
+
+---
 ## Acknowledgements
 
 - NOAA National Centers for Environmental Information (NCEI)
