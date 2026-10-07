@@ -1,11 +1,10 @@
 # Seattle vs. Berkeley Precipitation Analysis
 
-This project investigates whether it rains more in Seattle, Washington than in Berkeley, California. Daily precipitation data from NOAA were analyzed from 2018 through 2022. Missing observations were cleaned and imputed using historical precipitation patterns, and the two cities were compared using daily, monthly, and seasonal analyses. The results show that Seattle generally receives more precipitation than Berkeley, with especially large differences during summer, fall, and winter.
-
 ---
 
 ## Project Overview
 
+This project investigates whether it rains more in Seattle, Washington than in Berkeley, California. Daily precipitation data from NOAA were analyzed from 2018 through 2022. Missing observations were cleaned and imputed using historical precipitation patterns, and the two cities were compared using daily, monthly, and seasonal analyses. The results show that Seattle generally receives more precipitation than Berkeley, with especially large differences during summer, fall, and winter.
 
 - **Objective:** Determine whether it rains more in Seattle, WA than in Berkeley, CA.
 - **Domain:** Weather / Climate Data
@@ -19,10 +18,10 @@ This project investigates whether it rains more in Seattle, Washington than in B
 ├── data/                                    # Raw and processed data
 │   ├── seattle_rain.csv                       # Raw Seattle data from 01/01/2018 to 12/31/2022
 │   ├── berkeley_rain.csv                      # Raw Berkeley data from 01/01/2018 to 12/31/2022
-│   ├── berkeley_25_years.csv                  # Raw 25 years Berkeley data using for training model 
+│   ├── berkeley_25_years.csv                  # Historical Berkeley data used for model training
 │   └── clean_seattle_berkeley_weather.csv     # Clean data             
 ├── code/                                    # Jupyter notebooks and Python scripts
-│   └── Weather_Data.ipynb                     # Main note book
+│   └── Weather_Data.ipynb                     # Main notebook
 ├── reports/                                 # Generated reports and visualizations
 ├── requirements.txt                         # Dependencies
 └── README.md                                # Project documentation
@@ -44,7 +43,6 @@ This project investigates whether it rains more in Seattle, Washington than in B
 - precipitation: daily precipitation in inches
 - day_of_year: day number within the year
 
-- **License:** (if applicable)
 
 ### Data Preparation
 
@@ -97,7 +95,9 @@ Berkeley generally receives very little precipitation during the summer, while S
 
 ---
 
-## Statistical Analysis
+## Analysis
+
+The full data preparation and analysis workflow is contained in `code/Weather_Data.ipynb`. The analysis included cleaning and combining the datasets, handling missing precipitation values, exploring daily, monthly, and seasonal precipitation patterns, and performing statistical tests to compare Seattle and Berkeley.
 
 ### Monthly Precipitation
 
@@ -138,9 +138,6 @@ $$
 | Summer | 2.95 in | 0.06 in | 0.001 | Yes |
 | Fall | 11.40 in | 3.77 in | 0.011 | Yes |
 
-Seattle received significantly more precipitation than Berkeley during winter, summer, and fall. Spring was the only season where the difference was not statistically significant at the 0.05 level.
-
-
 Seattle received significantly more precipitation than Berkeley during winter, summer, and fall.
 Spring was the only season where the difference was not statistically significant at the 0.05 level.
 Berkeley also experienced an unusually wet winter in 2019, when its seasonal precipitation exceeded Seattle. This was an exception to the overall pattern and was associated with major Pacific storms and atmospheric river events affecting Northern California.
@@ -152,7 +149,7 @@ Berkeley also experienced an unusually wet winter in 2019, when its seasonal pre
 The analysis provides evidence that Seattle generally receives more precipitation than Berkeley.
 Seattle's average daily precipitation was approximately 0.113 inches, compared with approximately 0.053 inches in Berkeley.
 The monthly analysis found statistically significant differences between the cities in most months, with March and April as the exceptions.
-The seasonal analysis also showed significant differences during winter, summer, and fall. The largest seasonal contrast occurred during summer, when Seattle averaged approximately 2.95 inches of precipitation compared with only 0.06 inches in Berkeley.
+The seasonal analysis also showed significant differences during winter, summer, and fall. The largest relative seasonal contrast occurred during summer, when Seattle averaged approximately 2.95 inches of precipitation compared with only 0.06 inches in Berkeley.
 Although Berkeley occasionally experienced unusually wet periods, the overall daily, monthly, and seasonal patterns support the conclusion that it rains more in Seattle than in Berkeley.
 
 ---
@@ -181,7 +178,7 @@ Final communication report:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
 ---
 
